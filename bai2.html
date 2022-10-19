@@ -64,20 +64,28 @@
     document.write(" Tổng MAX của mảng : " + max + "<br>");
     // Tìm max của các số lẻ trong mảng
     let maxle = sum[0];
+    let flag = 0;
     for (let i = 0; i < a; i++) {
         if (sum[i] % 2 === 1) {
             maxle = sum[i];
+            flag = 1;
         }
     }
-    document.write(" Max của các số lẻ trong mảng :" + maxle + "<br>");
+    if (flag === 1) {
+        document.write(" Max của các số lẻ trong mảng :" + maxle + "<br>");
+    } else document.write("Không có số Max")
     //Tìm vị trí của x
     let d = +prompt("Nhập x");
+    flag1 = 0;
     for (let i = 0; i < a; i++) {
         if (sum[i] === d) {
-            document.write(" vị trí của X : " + i + "<br>");
-            break;
+            flag1 = 1;
         }
     }
+    if (flag1 === 1) {
+        document.write(" vị trí của X : " + i + "<br>");
+        break;
+    } else document.write("Không có X trong mảng");
 </script>
 </body>
 </html>
