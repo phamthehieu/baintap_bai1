@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng từ a đến b</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập số a");
+    let b = +prompt("Nhập số b");
+    let sum = 0;
+    if (a > b) {
+        for (let i = b; i < a; i++) {
+            sum += i;
+        }
+    } else if (a < b) {
+        for (let i = a; i < b; i++) {
+            sum += i;
+        }
+    } else sum = a;
+    document.write(" Tổng các số từ a đến b = " + sum)
+</script>
+</body>
+</html>

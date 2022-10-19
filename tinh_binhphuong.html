@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính bình phương ab</title>
+</head>
+<body>
+<p>số A:</p>
+<input type="text" id="so1">
+<p>số B:</p>
+<input type="text" id="so2">
+<br>
+<br>
+<button onclick="ketqua()">Tính</button>
+<p>a phương 2 :</p>
+<p id="kq"></p>
+<p>a bình phương b:</p>
+<p id="qa"></p>
+<script>
+  function ketqua() {
+    let a = document.getElementById("so1").value;
+    let b = document.getElementById("so2").value;
+    let value = Math.pow(a,2);
+    document.getElementById("kq").innerHTML = value;
+    let num = Math.pow(a,b);
+    document.getElementById("qa").innerHTML = num;
+  }
+</script>
+</body>
+</html>

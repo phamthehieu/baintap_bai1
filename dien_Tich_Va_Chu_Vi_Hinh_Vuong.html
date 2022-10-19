@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu vi và diện tích hình vuông</title>
+</head>
+<body>
+<input type="text" id="numbers">
+<button onclick="ketqua()">In</button>
+<p>Chu vi:</p>
+<p id="cv"></p>
+<p>Diện tích:</p>
+<p id="dt"></p>
+<script>
+  function ketqua() {
+      num = document.getElementById("numbers").value;
+      let cvhv = num * 4;
+      document.getElementById("cv").innerHTML = cvhv;
+      let dthv = num * num;
+      document.getElementById("dt").innerHTML = dthv;
+  }
+</script>
+</body>
+</html>
