@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    //Nhập n số phần tử của mảng
+    let sum = [];
+    let a = +prompt("Nhập số N phần tử");
+    //Nhập và N phần tử
+    for (let i = 0; i < a; i++) {
+        sum[i] = +prompt("In ra các phần tử:")
+    }
+    // in ra các phần tử
+    for (let i = 0; i < sum.length; i++) {
+        document.write(" Phần tử thứ " + i + " là: " + sum[i] + "<br>");
+    }
+    //Tính tỏng các phần tử
+    let ast = 0;
+    for (let i = 0; i < a; i++) {
+        ast += sum[i]
+    }
+    document.write(" Tổng các phần tử là : " + ast + "<br>");
+    //Tính tổng phần tử chia 5 dư 2
+    let art = 0;
+    for (let i = 0; i < a; i++) {
+        if (sum[i] % 5 === 2) {
+            art += sum[i];
+        }
+    }
+    document.write(" Tổng các phần tử chia 5 dư 2 bằng: " + art + "<br>");
+    // Đếm các phần tử chia hết ch 6
+    let rst = 0;
+    for (let i = 0; i < a; i++) {
+        if (sum[i] % 6 === 0) {
+            rst++;
+        }
+    }
+    document.write(" Số phần tử chia hết cho 6: " + rst + "<br>");
+    //Tính TBC các phần tử > 10 và chia 4 dư 3
+    let sst = 0;
+    let sut = 0;
+    for (let i = 0; i < a; i++) {
+        if (sum[i] > 10 && sum[i] % 4 === 3) {
+            sst += sum[i];
+        }
+    }
+    for (let i = 0; i < a; i++) {
+        if (sum[i] > 10 && sum[i] % 4 === 3) {
+            sut++;
+        }
+    }
+    let pop = sst / sut;
+    document.write(" TBC các phần tử > 10 và chia 4 dư 3 " + pop + "<br>");
+    // Tim max của mảng
+    let max = sum[0];
+    for (let i = 0; i < a; i++) {
+        if (max < sum[i]) {
+            max = sum[i];
+        }
+    }
+    document.write(" Tổng MAX của mảng : " + max + "<br>");
+    // Tìm max của các số lẻ trong mảng
+    let maxle = sum[0];
+    for (let i = 0; i < a; i++) {
+        if (sum[i] % 2 === 1) {
+            maxle = sum[i];
+        }
+    }
+    document.write(" Max của các số lẻ trong mảng :" + maxle + "<br>");
+    //Tìm vị trí của x
+    let d = +prompt("Nhập x");
+    for (let i = 0; i < a; i++) {
+        if (sum[i] === d) {
+            document.write(" vị trí của X : " + i + "<br>");
+            break;
+        }
+    }
+</script>
+</body>
+</html>
